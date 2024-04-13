@@ -1,0 +1,178 @@
+
+<app-navbar></app-navbar>
+<form class="row mt" style="padding: 1%" [formGroup]="condidateForm">
+
+  <div class="col-lg-6 col-md-6 col-sm-12"  >
+    <!--  BASIC BUTTONS -->
+    <div class="showback">
+      <h4><i class="fa fa-angle-right"></i> Cordonnées</h4>
+      <div class="form-horizontal style-form" style="margin-top: 5px;"  >
+        <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">Nom</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="nom" id="nom" placeholder="nom" formControlName="nom">
+            
+          </div>
+        </div> 
+        <hr style="height:2px;border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
+
+      <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">Prenom
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="prenom" id="prenom" placeholder="prenom"formControlName="prenom">
+          </div> 
+        </div>
+        <hr style="height:2px;border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
+
+        <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">Date De Naiss</label>
+          <div class="col-sm-10">
+            <input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth" placeholder="date_nais"formControlName="date_nais">
+      
+        <hr style="height:2px;border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
+   
+        
+        <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">Email</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="email" id="email" placeholder="email" formControlName="email">
+           
+          </div>
+        </div>
+        <hr style="height:2px;border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
+
+        <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">Tel</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" name="Tel" id="Tel" placeholder="tel" formControlName="tel">
+       
+          </div>
+        </div>
+        <hr style="height:2px;border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
+        <div class="col-sm-10">
+                          
+          <label for="inputName">Genre</label>
+          <div  class="form-check">
+          <input class="form-check-input" type="radio" value="Homme" id="Homme" formControlName="genre" >
+          <label class="col-sm-2 col-sm-2 control-label" for="flexRadioDefault1">
+            Homme
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <input class="form-check-input" type="radio"  formControlName="genre"  value="Femme" id="Femme" checked  >
+          <label class="col-sm-2 col-sm-2 control-label" for="flexRadioDefault2">
+         Femme
+          </label> 
+        </div>
+        
+      </div>
+      <hr style="height:2px;border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
+
+      <div class="form-group">
+        <label class=" control-label">Lettre de motivation</label>
+        <div class="col-sm-10">
+            
+                <input type="file" class="form-control" id="customFile" (change)="addlettre($event)" >
+                
+               
+        </div>
+      </div>
+
+          </div></div>
+        </div>
+      
+    </div>
+    
+  </div> 
+
+  <div class="col-lg-6 col-md-6 col-sm-12">
+
+    <div class="showback">
+      <h4><i class="fa fa-angle-right"></i> Niveau d'étude</h4>
+      <div class="form-horizontal style-form" style="margin-top: 10px;">
+        
+          <div class="form-group">
+              <label class="col-sm-2 col-sm-2 control-label">Niveau</label>
+              <div class="col-sm-10">
+                <input type="text"  class="form-control" name="niveauEtud" id="niveauEtud" placeholder="Niveau" formControlName="niveau">
+                
+              </div>
+          </div>
+          <hr style="height:2px;border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
+
+          <div class="form-group">
+              <label class="col-sm-2 col-sm-2 control-label">Diplôme </label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="titreDiplome" id="titreDiplome" placeholder="diplome"  formControlName="diplome">
+                
+              </div>
+          </div>
+          <hr style="height:2px;border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
+
+          <div class="form-group">
+              <label class="col-sm-2 col-sm-2 control-label">université</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="university" id="university" placeholder="universite" formControlName="universite">
+               
+ 
+              </div>
+          </div>
+        </div>
+    </div>
+ 
+    <div class="showback1">
+      <h4><i class="fa fa-angle-right" style="padding-top: 10px;"></i> Expérience</h4>
+      <div class="form-horizontal style-form" style="margin-top: 10px;" >
+         <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">CV</label>
+          <div class="col-sm-10">
+              
+                  <div style="margin-top:3px">
+                 <input type="file" id="customFile" class="form-control"  style="height:100%" (change)="addCv($event)">
+                  </div>
+          
+          </div>
+        </div> 
+
+          <hr style="height:2px;border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
+
+          <div class="form-group">
+              <label class=" control-label">Vos expériences</label>
+              <div class="col-sm-10">
+                  <textarea class="form-control" id="exampleFormControlTextarea1"  formControlName="experience" rows="4"></textarea>
+                
+  
+              </div>
+          </div>
+          <hr style="height:2px;border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
+
+          <div class="col-sm-10">
+                          
+            <label for="inputName">Type de demande</label>
+            <div  class="form-check">
+            <input class="form-check-input" type="radio"  value="stage" id="stage" placeholder="type" formControlName="type">
+            <label class="col-sm-2 col-sm-2 control-label" for="flexRadioDefault1">
+              Stage
+            </label>
+         
+          </div>
+          
+          <div class="form-check">
+            <input class="form-check-input" type="radio"  formControlName="type"  value="embauche" id="embauche" checked  placeholder="type">
+            <label class="col-sm-2 col-sm-2 control-label" for="flexRadioDefault2">
+             Embouche
+            </label> 
+          </div>
+          
+        </div>
+
+      </div>
+      <button style="margin-left:150px ;" class="btn-save"  (click)="submitcondidate()">Postuler</button>
+    </div>
+
+  </div>
+
+  
+</form>
